@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DeepTurn"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "DeepTurn enables deeplinking in iOS apps."
 
   s.homepage     = "https://github.com/GabrielMassana"
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/GabrielMassana/DeepTurn-iOS.git", :tag => s.version, :branch => "master"}
   
-  s.source_files  = "DeepTurn-iOS/*.swift"
+  s.source_files  = "DeepTurn/DeepTurn-iOS/*.swift"
 
   s.requires_arc = true
 

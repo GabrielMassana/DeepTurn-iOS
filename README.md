@@ -49,6 +49,6 @@ $ git push --tags
 
 Gabriel Massana
 
-##Found an issue?
+## Found an issue?
 
 Please open a [new Issue here](https://github.com/GabrielMassana/DeepTurn-iOS/issues/new) if you run into a problem specific to DeepTurn-iOS, have a feature request, or want to share a comment.

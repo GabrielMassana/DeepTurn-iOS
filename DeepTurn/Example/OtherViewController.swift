@@ -13,7 +13,10 @@ class OtherViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.black
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

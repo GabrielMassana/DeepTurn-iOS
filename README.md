@@ -68,9 +68,9 @@ Probably you'll have a strong reference stored of your `rootViewController`. Wit
 
 Deepturn got three open functions to be used:
 
-- mapRoute(): to set up all the routes the app supports.
-- mapDefault(): to set up the default route, in case we try to use deeplink, but the route is unknown.
-- resolve(): to push a URL to the system.
+- `mapRoute()`: to set up all the routes the app supports.
+- `mapDefault()`: to set up the default route, in case we try to use deeplink, but the route is unknown.
+- `resolve()`: to push a URL to the system.
 
 ```swift
 // Setting up the Routes
@@ -122,7 +122,6 @@ Deepturn.mapRoute(withFormat: "other/viewController/:red/:green/:blue", toDestin
         
 ```
 
-Calling a 
 ```swift
 // Calling to resolve a URL 
 

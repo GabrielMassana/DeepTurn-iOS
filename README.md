@@ -5,19 +5,19 @@
 DeepTurn is a Swift tool to enable deeplinking in iOS apps.
 
 It is based in [Turnpike](https://cocoapods.org/pods/Turnpike), an Objective-C pod with the same purpose.
-The original project was created by James Lawrence Turner.
+The original project was created by [James Lawrence Turner](https://github.com/URXtech/turnpike-ios).
 
 ## Deeplink Concept
 
 The core concept of deeplinking is to allow to open any view of you app from other apps.
 
-With the Associated Domains capability we can easily open the app from anywhere. With Deeplink we can also open any view. 
+With the `Associated Domains` capability we can easily open the app from anywhere. With `Deeplink` we can also open any view. 
 
-To use deeplink we need to set up the proper internal architecture. To do so, we will use URL scheme to internally navigate the app.
+To use deeplink we need to set up the proper internal architecture. To do so, we will use `URL-Scheme` to internally navigate the app.
 
 DeepTurn will help to do it.
 
-To do the job, we will need to set up Associated Domains and Register a Custom URL Scheme. 
+So, to do the job, we will need to set up Associated Domains and Register a Custom URL Scheme. 
 
 ## Installation
 

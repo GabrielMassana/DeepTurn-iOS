@@ -141,6 +141,10 @@ Deepturn.mapRoute(withFormat: "other/viewController/:red/:green/:blue", toDestin
             Deepturn.resolve(url: url)
         }
 ```
+With this example we will present a ViewController modally, with random background and randomly animated.
+
+The example allows you to see how to use *query and route parameters*.
+
 ## License
 
 DeepTurn-iOS is released under the MIT license. Please see the file called LICENSE.

@@ -57,14 +57,14 @@ You will also need to add this to your Info.plist:
 
 ```
 Also, you'll need to catch any URL comming from outside the app in the AppDelegate:
-'application(_:open:sourceApplication:annotation:)'
+`application(_:open:sourceApplication:annotation:)`
 
 
 ## Example
 
 The example in the code is as simple as possible. If you are going to use DeepTurn, you'll need some type of Manager to handle the whole navigation of your app.
 
-Probably you'll have a strong reference stored of your 'rootViewController'. With the RootViewController, you will be able to push or present your deeplinked view.
+Probably you'll have a strong reference stored of your `rootViewController`. With the RootViewController, you will be able to push or present your deeplinked view.
 
 Deepturn got three open functions to be used:
 
@@ -73,10 +73,75 @@ Deepturn got three open functions to be used:
 - resolve(): to push a URL to the system.
 
 ```swift
-//Code example here
+// Setting up the Routes
 
+Deepturn.mapRoute(withFormat: "other/viewController/:red/:green/:blue", toDestination: {
+            (request: RouteRequest?) in
+            
+            guard let routeParameters = request?.routeParameters,
+                let queryParameters = request?.queryParameters,
+                let red = routeParameters["red"],
+                let green = routeParameters["green"],
+                let blue = routeParameters["blue"],
+                let floatRed = Float(red),
+                let floatGreen = Float(green),
+                let floatBlue = Float(blue) else {
+                
+                    return
+            }
+            
+            let color = UIColor(red: CGFloat(floatRed) / 255.0,
+                                green: CGFloat(floatGreen) / 255.0,
+                                blue: CGFloat(floatBlue) / 255.0,
+                                alpha: 1.0)
+
+            
+            let isAnimated = queryParameters["is_animated"]
+            var animated = true
+            
+            if isAnimated == "false" {
+                
+                animated = false
+            }
+            
+            let otherViewController = OtherViewController(nibName: nil,
+                                                          bundle: nil)
+            
+            otherViewController.view.backgroundColor = color
+            
+            rootViewController.present(otherViewController,
+                                       animated: animated,
+                                       completion: nil)
+        })
+
+
+        Deepturn.mapDefault { (request: RouteRequest?) in
+            
+        }
+        
+        
 ```
 
+Calling a 
+```swift
+// Calling to resolve a URL 
+
+        let red = String(arc4random_uniform(256))
+        let green = String(arc4random_uniform(255))
+        let blue = String(arc4random_uniform(255))
+        
+        var animated = true
+        
+        if arc4random_uniform(2) == 0 {
+            
+            animated = false
+        }
+        
+        if let url = URL(string: "other/viewController/\(red)/\(green)/\(blue)/?is_animated=\(animated)") {
+            
+            Deepturn.resolve(url: url)
+        }
+```
 ## License
 
 DeepTurn-iOS is released under the MIT license. Please see the file called LICENSE.

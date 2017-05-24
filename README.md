@@ -152,7 +152,7 @@ DeepTurn-iOS is released under the MIT license. Please see the file called LICEN
 ## Versions
 
 ```bash
-$ git tag -a 0.1.0 -m 'Version 0.1.0'
+$ git tag -a 0.2.0 -m 'Version 0.2.0'
 
 $ git push --tags
 ```

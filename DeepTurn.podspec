@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DeepTurn"
-  s.version      = "0.2.0"
+  s.version      = "0.3.0"
   s.summary      = "DeepTurn enables deeplinking in iOS apps."
 
   s.homepage     = "https://github.com/GabrielMassana"

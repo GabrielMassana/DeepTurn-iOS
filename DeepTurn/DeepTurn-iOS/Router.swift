@@ -9,7 +9,7 @@
 import UIKit
 
 /// Completion block to be used when a route is found.
-typealias RouteCompletionBlock = (RouteRequest?) -> Void
+public typealias RouteCompletionBlock = (RouteRequest?) -> Void
 
 class Router: NSObject {
 

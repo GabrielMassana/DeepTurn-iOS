@@ -10,21 +10,22 @@ import UIKit
 
 open class RouteRequest: NSObject {
 
-    
     //MARK: - Properties
 
     /// The URL schema of the incoming URL. If invoked internally, this will be `nil`.
-    var urlSchema: String?
+    fileprivate(set) public var urlSchema: String?
 
     /// The query parameters parsed from the query string.
-    var queryParameters: [String : String]?
+    fileprivate(set) public var queryParameters: [String : String]?
     
     /// Matched defined route. If no match was found, the default route will be invoked and this will be `nil`.
-    var matchedRoute: String?
+    fileprivate(set) public var matchedRoute: String?
     
     /// Route parameters found in the matched route. If no route parameters are found this will be an empty Dictionary, and if no matched route was found, this will be `nil`.
-    var routeParameters: [String : String]?
+    fileprivate(set) public var routeParameters: [String : String]?
     
+    //MARK: - Init
+
     public init(urlSchema: String? = nil,
                 queryParameters: [String : String]? = nil,
                 matchedRoute: String? = nil,

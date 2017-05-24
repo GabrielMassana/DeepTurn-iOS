@@ -21,7 +21,7 @@ open class Deepturn : NSObject {
      
      - Note: Allowed formats: (i.e. "users/:id" or "logout"). When calling the deeplink, :id can be anything.
      */
-    class func mapRoute(withFormat format: String, toDestination destination: @escaping RouteCompletionBlock) {
+    open class func mapRoute(withFormat format: String, toDestination destination: @escaping RouteCompletionBlock) {
         
         Router.sharedInstance.mapRoute(withFormat: format, toDestination: destination)
     }
@@ -31,7 +31,7 @@ open class Deepturn : NSObject {
      
      - parameter destination: the callback to be used as default.
      */
-    class func mapDefault(toDestination destination: @escaping RouteCompletionBlock) {
+    open class func mapDefault(toDestination destination: @escaping RouteCompletionBlock) {
         
         Router.sharedInstance.mapDefault(toDestination: destination)
     }

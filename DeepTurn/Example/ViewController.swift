@@ -39,7 +39,6 @@ class ViewController: UIViewController {
                                 green: CGFloat(floatGreen) / 255.0,
                                 blue: CGFloat(floatBlue) / 255.0,
                                 alpha: 1.0)
-
             
             let isAnimated = queryParameters["is_animated"]
             var animated = true
